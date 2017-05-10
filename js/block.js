@@ -332,7 +332,7 @@ function getEntityMarkup(
     return `<a href="${entity.data.url}" target="${target}" >${text}</a>`;
   }
   if (entity.type === 'IMAGE') {
-    return `<img src="${entity.data.src}" style="float:${entity.data.alignment || 'none'};height: ${entity.data.height};width: ${entity.data.width}"/>`;
+    return `<p style="float:${entity.data.alignment || 'none'};text-align:${entity.data.alignment || 'center'}"><img src="${entity.data.src}" style="height: ${entity.data.height};width: ${entity.data.width}"/></p>`;
   }
   if (entity.type === 'EMBEDDED_LINK') {
     return `<iframe width="${entity.data.width}" height="${entity.data.height}" src="${entity.data.src}" frameBorder="0"></iframe>`;
